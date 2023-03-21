@@ -5,7 +5,7 @@
   const sumOfNums = (a: number, b: number) => a + b;
 </script>
 
-<div class="flex w-full flex-col items-center pt-4">
+<div class="flex flex-col items-center pt-4">
   <p>Number One is {numberOne}</p>
   <p>Number Two is {numberTwo}</p>
   <p>Sum: {sumOfNums(numberOne, numberTwo)}</p>

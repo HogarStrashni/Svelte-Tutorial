@@ -14,7 +14,7 @@
 
 <main
   lang="ts"
-  class="flex h-full flex-col items-center justify-center overflow-auto bg-black text-gray-200"
+  class="flex min-h-full flex-col items-center justify-center overflow-auto bg-black py-8 text-gray-200"
 >
   <Counter />
   <SumNumbers />

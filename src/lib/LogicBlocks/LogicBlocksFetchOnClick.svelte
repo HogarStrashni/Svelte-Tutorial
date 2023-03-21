@@ -48,21 +48,23 @@
   };
 </script>
 
-<button
-  class="mt-4 rounded-lg border border-gray-200 py-2 px-4"
-  on:click={() => {
-    getAllUsers();
-  }}
->
-  GetUsers
-</button>
+<section class="flex flex-col items-center text-green-500">
+  <button
+    class="mt-4 rounded-lg border border-green-500 py-2 px-4"
+    on:click={() => {
+      getAllUsers();
+    }}
+  >
+    GetUsers
+  </button>
 
-{#if allUsers.loading === true}
-  <p>Loading Spinner Component...</p>
-{:else}
-  {#each allUsers.allUsersData || [] as { id, name, email } (id)}
-    <div>
-      <p>{name} / {email}</p>
-    </div>
-  {/each}
-{/if}
+  {#if allUsers.loading === true}
+    <p>Loading Spinner Component...</p>
+  {:else}
+    {#each allUsers.allUsersData || [] as { id, name, email } (id)}
+      <div>
+        <p>{name} / {email}</p>
+      </div>
+    {/each}
+  {/if}
+</section>

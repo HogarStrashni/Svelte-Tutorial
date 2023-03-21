@@ -69,13 +69,13 @@
   {/if}
 </button>
 
-<div class="mt-4 flex w-full flex-col items-center">
+<div class="mt-4 flex flex-col items-center">
   {#each people as { id, firstName, lastName } (id)}
     <Person {id} {firstName} {lastName} />
   {/each}
 </div>
 
-<div class="mt-4 flex w-full flex-col items-center">
+<div class="mt-4 flex flex-col items-center">
   {#await getAllUsers()}
     <p>Loading Spinner Component...</p>
   {:then allUsers}

@@ -6,9 +6,7 @@
   $: sumAllNumbers = numbers.reduce((acc, num) => acc + num, 0);
 </script>
 
-<div
-  class="mt-4 flex w-full flex-col items-center text-2xl font-light text-gray-200"
->
+<div class="mt-4 flex flex-col items-center text-2xl font-light text-gray-200">
   <p>
     {numbers.join(" + ")} = {sumAllNumbers}
   </p>

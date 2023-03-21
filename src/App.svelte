@@ -4,6 +4,7 @@
   import ChildComponent from "./lib/ChildComponent.svelte";
   import LogicBlocks from "./lib/LogicBlocks/LogicBlocks.svelte";
   import LogicBlocksFetchOnClick from "./lib/LogicBlocks/LogicBlocksFetchOnClick.svelte";
+  import EventsDOM from "./lib/EventsDOM.svelte";
   import "./app.css";
 
   const numbers = {
@@ -31,4 +32,6 @@
 
   <!-- getting data on click event -->
   <LogicBlocksFetchOnClick />
+
+  <EventsDOM />
 </main>

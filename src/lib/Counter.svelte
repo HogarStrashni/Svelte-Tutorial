@@ -18,7 +18,7 @@
 
 <button
   on:click={incrementCount}
-  class="my-2 rounded-lg border border-gray-200 px-4 py-2 text-gray-200"
+  class="my-2 rounded-lg border border-gray-200 px-4 py-2"
 >
   Button clicked {count}
   {count === 1 ? "time" : "times"}! Doubled is {doubled}

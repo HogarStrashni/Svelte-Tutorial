@@ -11,27 +11,30 @@
     numberOne: 25,
     numberTwo: 15,
   };
+
+  const { numberOne: num1, numberTwo: num2 } = numbers;
 </script>
 
-<main
-  lang="ts"
-  class="flex min-h-full flex-col items-center justify-center overflow-auto bg-black py-8 text-gray-200"
->
-  <Counter />
-  <SumNumbers />
-  <ChildComponent numberOne={15} numberTwo={10} />
+<main lang="ts" class="overflow-auto bg-black py-8 text-gray-200">
+  <section class="flex flex-col items-center justify-center overflow-auto">
+    <Counter />
+    <SumNumbers />
+    <ChildComponent numberOne={15} numberTwo={10} />
 
-  <!-- without values - defaults -->
-  <ChildComponent />
+    <!-- without values - defaults -->
+    <ChildComponent />
 
-  <!-- values - with spread operator -->
-  <ChildComponent {...numbers} />
+    <!-- values - with spread operator -->
+    <ChildComponent {...numbers} />
 
-  <!-- getting data on initial load -->
-  <LogicBlocks />
+    <!-- getting data on initial load -->
+    <LogicBlocks />
 
-  <!-- getting data on click event -->
-  <LogicBlocksFetchOnClick />
-
-  <EventsDOM />
+    <!-- getting data on click event -->
+    <LogicBlocksFetchOnClick />
+  </section>
+  <EventsDOM
+    on:helloAlert={() => alert(`Via Dispatcher: Sum = ${num1 + num2}`)}
+    on:click={() => alert("Button forward")}
+  />
 </main>

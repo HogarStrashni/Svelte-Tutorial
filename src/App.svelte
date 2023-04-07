@@ -1,11 +1,12 @@
 <script lang="ts">
+  import "./app.css";
   import Counter from "./lib/Counter.svelte";
   import SumNumbers from "./lib/SumNumbers.svelte";
   import ChildComponent from "./lib/ChildComponent.svelte";
   import LogicBlocks from "./lib/LogicBlocks/LogicBlocks.svelte";
   import LogicBlocksFetchOnClick from "./lib/LogicBlocks/LogicBlocksFetchOnClick.svelte";
   import EventsDOM from "./lib/EventsDOM.svelte";
-  import "./app.css";
+  import Binding from "./lib/Binding.svelte";
 
   const numbers = {
     numberOne: 25,
@@ -37,4 +38,7 @@
     on:helloAlert={() => alert(`Via Dispatcher: Sum = ${num1 + num2}`)}
     on:click={() => alert("Button forward")}
   />
+  <section class="mt-4 py-2">
+    <Binding />
+  </section>
 </main>
